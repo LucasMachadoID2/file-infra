@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-file-process
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-file-process
+  template:
+    metadata:
+      labels:
+        app: app-file-process
+    spec:
+      containers:
+        - name: app-file-process
+          image: lucasmachadoid/fiap-file-process:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+
+
