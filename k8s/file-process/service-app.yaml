@@ -1,14 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-file-process-service
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-name: app-file-process-lb
+  name: file-process
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
-    app: app-file-process
+    app: file-process
   ports:
-    - name: http
-      port: 8080
+    - port: 8080
       targetPort: 8080
+      nodePort: 30080
