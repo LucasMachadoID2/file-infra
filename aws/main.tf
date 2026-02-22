@@ -15,7 +15,7 @@ resource "random_string" "bucket_suffix" {
 }
 
 resource "aws_s3_bucket" "video_frames" {
-  bucket = "file-process-bucket-${random_string.bucket_suffix.result}"
+  bucket = "file-process-bucket-fiap"
   force_destroy = true
 }
 
