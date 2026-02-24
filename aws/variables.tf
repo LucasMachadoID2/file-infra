@@ -13,5 +13,5 @@ variable "region" {
 variable "lab_role_arn" {
   description = "ARN da role existente no AWS Academy"
   type        = string
-  default     = "arn:aws:iam::{IDDACONTA}:role/LabRole"
+  default     = "arn:aws:iam::{ID_CONTA}:role/LabRole"
 }
