@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: file-process
-          image: file-process:1.0.4
+          image: app-file-process:1.0.14
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
