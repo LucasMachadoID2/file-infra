@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: app-file-management
-          image: app-file-management:1.0.14 
-          imagePullPolicy: IfNotPresent
+          image: lucasmachadoid/fiap-file-management:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
